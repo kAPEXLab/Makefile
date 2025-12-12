@@ -1,4 +1,4 @@
-# README: Scalable C Project with Directory-Structured Makefile
+# Scalable C Project with Directory-Structured Makefile
 
 ## Overview
 
@@ -172,7 +172,6 @@ $(TARGET): $(OBJ)
 *   `$@` — target (`myapp`)
 *   `$^` — all object prerequisites
 
-*
 
 ## Prerequisites
 
