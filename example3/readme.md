@@ -1,57 +1,59 @@
-Here’s the **README.md** for your improved Makefile with variables, pattern rules, and `.PHONY` targets:
+# README: Advanced Makefile for Building `myapp`
 
-***
+## Overview
 
-# **README: Advanced Makefile for Building `myapp`**
+This project demonstrates an optimized Makefile for compiling and linking a simple C program. The executable `myapp` is built from multiple source files using:
 
-## **Overview**
+*   Variables for compiler and flags.
+*   Pattern rules for generic compilation.
+*   Automatic variables (`$@`, `$^`, `$<`) for cleaner commands.
+*   .PHONY targets for utility actions.
 
-This project demonstrates an **optimized Makefile** for compiling and linking a simple C program. The executable **`myapp`** is built from multiple source files using:
+**Makefile**
+```makefile
+CC      := gcc
+CFLAGS  := -Wall
+SRC     := main.c hello.c
+OBJ     := $(SRC:.c=.o)
+TARGET  := myapp
+all: $(TARGET)
+$(TARGET): $(OBJ)
+	$(CC) -o $@ $^
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+.PHONY: all clean    
+clean:
+    rm -f *.o myapp
+```
 
-*   **Variables** for compiler and flags.
-*   **Pattern rules** for generic compilation.
-*   **Automatic variables** (`$@`, `$^`, `$<`) for cleaner commands.
-*   **.PHONY targets** for utility actions.
+## Concepts Explained
 
-***
-
-## **Concepts Explained**
-
-*   **Variables**:
+*   Variables:
     *   `CC := gcc` → Compiler.
     *   `CFLAGS := -Wall` → Enables warnings.
-*   **Pattern Rule**:
+*   Pattern Rule:
     *   `%.o: %.c` → Generic rule to compile any `.c` into `.o`.
-*   **Automatic Variables**:
+*   Automatic Variables:
     *   `$@` → Target name.
     *   `$^` → All prerequisites.
     *   `$<` → First prerequisite.
-*   **.PHONY**:
+*   .PHONY:
     *   Declares targets like `clean` and `all` as non-file targets.
 
-***
 
-## **Project Structure**
 
-    .
-    ├── main.c       # Contains main() function
-    ├── hello.c      # Implements helper functions
-    ├── hello.h      # Header file with declarations
-    ├── Makefile     # Build automation script
+## Project Structure
 
-***
+```
+├── main.c       # Contains main() function
+├── hello.c      # Implements helper functions
+├── hello.h      # Header file with declarations
+├── Makefile     # Build automation script
+```
 
-## **Prerequisites**
+## Execution Steps
 
-*   **GCC** installed (`gcc --version`).
-*   **Make** utility installed (`make --version`).
-*   Works on Linux/MacOS or Windows with MinGW/MSYS.
-
-***
-
-## **Execution Steps**
-
-### **1. Build the Application**
+### 1. Build the Application
 
 Run:
 
@@ -64,17 +66,13 @@ This will:
 *   Compile all `.c` files into `.o` using the pattern rule.
 *   Link them into the executable `myapp`.
 
-***
-
-### **2. Run the Application**
+### 2. Run the Application
 
 ```bash
 ./myapp
 ```
 
-***
-
-### **3. Clean Up**
+### 3. Clean Up
 
 Remove object files and executable:
 
@@ -82,48 +80,25 @@ Remove object files and executable:
 make clean
 ```
 
-***
+## How It Works
 
-## **How It Works**
-
-*   **Default Target (`all`)**:
+*   Default Target (`all`):
     ```make
     all: myapp
     ```
-*   **Linking Rule**:
+*   Linking Rule:
     ```make
     $(TARGET): $(OBJ)
         $(CC) -o $@ $^
     ```
-*   **Pattern Rule for Compilation**:
+*   Pattern Rule for Compilation:
     ```make
     %.o: %.c
         $(CC) $(CFLAGS) -c $< -o $@
     ```
-*   **Clean Target**:
+*   Clean Target:
     ```make
     .PHONY: all clean
     clean:
         rm -f *.o myapp
     ```
-
-***
-
-## **Optional Enhancements**
-
-*   **Auto Dependency Generation**:
-    Use `-MMD -MP` in `CFLAGS` and include `.d` files for header tracking.
-*   **Debugging Support**:
-    Add `-g` to `CFLAGS` for debugging symbols.
-*   **Parallel Build**:
-    Run `make -j` for faster compilation.
-
-***
-
-✅ Do you want me to:
-
-1.  **Add sample code for `main.c`, `hello.c`, and `hello.h`** so this README becomes fully runnable?
-2.  **Create an advanced template README for all future C/C++ projects (including Google Test and AUTOSAR C++14)**?
-3.  **Include auto-dependency generation section with example implementation**?
-
-Which one should I proceed with?

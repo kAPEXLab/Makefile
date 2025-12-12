@@ -10,6 +10,21 @@ This version introduces:
 *   Compiler warnings enabled via `-Wall`.
 *   Detailed dependency management for incremental builds.
 
+**Makefile**
+```makefile
+CC      = gcc
+CFLAGS  = -Wall
+myapp: main.o hello.o
+	$(CC) -o myapp main.o hello.o
+main.o: main.c hello.h
+	$(CC) $(CFLAGS) -c main.c
+hello.o: hello.c hello.h
+	$(CC) $(CFLAGS) -c hello.c
+clean:
+	rm -f *.o myapp        
+```
+
+
 ### Concepts Explained
 
 *   Makefile Targets & Dependencies  
