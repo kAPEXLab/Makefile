@@ -1,9 +1,11 @@
 # make
 
 *What is make and Why Use It?*
+
 `make` is a build automation tool that reads instructions from a Makefile.
 
 It helps:
+
 * Automate compilation.
 * Manage dependencies.
 * Avoid unnecessary recompilation.
@@ -12,27 +14,32 @@ It helps:
 Key Idea: If a source file changes, only its dependent targets are rebuilt.
 
 *Installation*
-
 ````bash
 sudo apt-get install build-essential
 ````
-
-Below is a concise, add-to-top README **summary of the 5 Makefile experiments** you shared. Each entry explains what the example does, what concepts it demonstrates, and when to use it—so readers can quickly choose the right starting point.
-
 ***
 
-## 1) **Basic Makefile: Two Sources, Manual Rules**
+Below is a concise, **summary of the 5 Makefile experiments** present in this repository. Each entry explains what the example does, what concepts it demonstrates, and when to use it—so readers can quickly choose the right starting point.
+
+| Example  |  Key Feature  |  When to Pick Which  |
+| -------- |  ------------ |  ------------------- |
+| Example 1  |  Basic rules  | Learn fundamentals; smallest demos|
+| Example 2  | Variables & warnings | Add flexibility (compiler/flags) to small projects. |
+| Example 3  | Pattern rules & .PHONY | cale compilation generically without per-file rules. |
+| Example 4  | Explicit SRC/OBJ mapping | Maintain a clear, curated source list with clean mapping. |
+| Example 5  | Directory structure, auto-deps, build modes | Full-featured, scalable build with directories, auto-deps, and release/debug. |
+
+
+## Example 1: **Basic Makefile: Two Sources, Manual Rules**
 
 **Files**: `main.c`, `hello.c`, `hello.h`  
 **Executable**: `myapp`  
 **What it shows**:
-
 *   Minimal Make usage with explicit targets and dependencies.
 *   Manual compile rules for each `.c` and a link rule for the final executable.
 *   Simple `clean` target to remove build artifacts.
 
 **Key concepts**:
-
 *   Targets & prerequisites (`myapp: main.o hello.o`)
 *   Object files (`.o`) and linking
 *   Rebuilds only when source/header timestamps change
@@ -49,7 +56,7 @@ make clean  # remove *.o and myapp
 
 ***
 
-## 2) **Makefile with Variables (CC, CFLAGS) and Warnings**
+## Example 2: **Makefile with Variables (CC, CFLAGS) and Warnings**
 
 **Files**: `main.c`, `hello.c`, `hello.h`  
 **Executable**: `myapp`  
@@ -61,7 +68,7 @@ make clean  # remove *.o and myapp
 
 **Key concepts**:
 
-*   Customizable toolchain via variables (`make CC=clang`)
+*   Customizable toolchain via variables
 *   Better maintainability by centralizing flags
 *   Dependency tracking on headers (manual listing)
 
@@ -73,13 +80,11 @@ make clean  # remove *.o and myapp
 make
 ./myapp
 make clean
-# Example overrides:
-make CC=clang CFLAGS="-Wall -Wextra"
 ```
 
 ***
 
-## 3) **Pattern Rules & .PHONY: Generic Build for Any `.c`**
+## Example 3: **Pattern Rules & .PHONY: Generic Build for Any `.c`**
 
 **Files**: `main.c`, `hello.c`, `add.c`, `hello.h`, `add.h`  
 **Executable**: `myapp`  
@@ -99,7 +104,7 @@ make CC=clang CFLAGS="-Wall -Wextra"
 
 **Typical commands**:
 
-```bash
+```bash***
 make        # builds myapp from all listed sources
 ./myapp
 make clean  # removes objects and myapp
@@ -107,7 +112,7 @@ make clean  # removes objects and myapp
 
 ***
 
-## 4) **Multi-Source with Explicit SRC/OBJ & Auto Discovery**
+## Example 4: **Multi-Source with Explicit SRC/OBJ & Auto Discovery**
 
 **Files**: `main.c`, `hello.c`, `add.c`, headers  
 **Executable**: `myapp`  
@@ -135,7 +140,7 @@ make clean
 
 ***
 
-## 5) **Directory-Structured, Release/Debug Modes & Auto-Dependencies**
+## Example 5: **Directory-Structured, Release/Debug Modes & Auto-Dependencies**
 
 **Directories**: `src/`, `include/`, `build/`  
 **Executable**: `myapp`  
@@ -164,18 +169,4 @@ make run        # build then run
 make clean      # remove build/ and myapp
 make -j         # parallel builds
 make CC=clang   # toolchain override
-```
-
-***
-
-### Quick Comparison (When to Pick Which)
-
-*   **#1 Basic**: Learn fundamentals; smallest demos.
-*   **#2 Variables**: Add flexibility (compiler/flags) to small projects.
-*   **#3 Pattern Rules**: Scale compilation generically without per-file rules.
-*   **#4 Explicit SRC**: Maintain a clear, curated source list with clean mapping.
-*   **#5 Structured & Modes**: Full-featured, scalable build with directories, auto-deps, and release/debug.
-
-***
-
-If you want, I can **merge these into a single top-level README section** with links to each example’s folder, or generate a **table of contents** that points to each Makefile’s location and usage.
+``
