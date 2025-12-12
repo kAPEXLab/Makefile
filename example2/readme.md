@@ -11,7 +11,7 @@ This version introduces:
 *   Detailed dependency management for incremental builds.
 
 **Makefile**
-```makefile
+```make
 CC      = gcc
 CFLAGS  = -Wall
 myapp: main.o hello.o
@@ -85,7 +85,6 @@ Remove object files and executable:
 make clean
 ```
 
-*
 
 ### How It Works
 
@@ -109,8 +108,6 @@ make clean
     ```bash
     rm -f *.o myapp
     ```
-
-*
 
 ### Best Practices
 
