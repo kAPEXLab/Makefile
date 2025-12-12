@@ -1,4 +1,4 @@
-# README: Advanced Makefile for Multi-Source C Project
+# Advanced Makefile for Multi-Source C Project
 
 ## Overview
 
@@ -9,7 +9,7 @@ This project demonstrates an efficient Makefile for building a C application fro
 *   `add.c` → Implements addition-related functions.
 *   `hello.h` and `add.h` → Header files for declarations.
 
-```makefile
+```make
 CC      := gcc
 CFLAGS  := -Wall
 SRC     := main.c hello.c add.c
@@ -52,10 +52,8 @@ The Makefile uses:
 *   .PHONY:
     *   Declares `all` and `clean` as non-file targets.
 
-*
 
 ## Project Structure
-
 
 ```
 ├── main.c       # Entry point
