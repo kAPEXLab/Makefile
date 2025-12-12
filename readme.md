@@ -19,6 +19,12 @@ sudo apt-get install build-essential
 ````
 ***
 
+*Reference*
+
+[https://www.gnu.org/software/make/manual/make.html](https://www.gnu.org/software/make/manual/make.html)
+
+***
+
 Below is a concise, **summary of the 5 Makefile experiments** present in this repository. Each entry explains what the example does, what concepts it demonstrates, and when to use it—so readers can quickly choose the right starting point.
 
 | Example  |  Key Feature  |  When to Pick Which  |
