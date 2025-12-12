@@ -1,4 +1,4 @@
-# README: Building `myapp` with Makefile (Enhanced Version)
+# Building `myapp` with Makefile (Enhanced Version)
 
 ### Overview
 
