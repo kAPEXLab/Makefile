@@ -1,4 +1,4 @@
-# README: Advanced Makefile for Building `myapp`
+# Advanced Makefile for Building `myapp`
 
 ## Overview
 
@@ -10,7 +10,7 @@ This project demonstrates an optimized Makefile for compiling and linking a simp
 *   .PHONY targets for utility actions.
 
 **Makefile**
-```makefile
+```make
 CC      := gcc
 CFLAGS  := -Wall
 SRC     := main.c hello.c
