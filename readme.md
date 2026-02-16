@@ -1,6 +1,6 @@
 # make
 
-*What is make and Why Use It?*
+*What is make and Why Use It?*https://github.com/kAPEXLab/Makefile/tree/main
 
 `make` is a build automation tool that reads instructions from a Makefile.
 
@@ -36,7 +36,7 @@ Below is a concise, **summary of the 5 Makefile experiments** present in this re
 | Example 5  | Directory structure, auto-deps, build modes | Full-featured, scalable build with directories, auto-deps, and release/debug. |
 
 ## Makefile – Examples Index
-- [Example 1 – Basic Rules](example1/)
+- [Example 1 – Basic Rules](example1)
 - [Example 2 – Variables & Warnings](example2/)
 - [Example 3 – Pattern Rules & .PHONY](example3/)
 - [Example 4 – Explicit SRC/OBJ Mapping](example4/)
