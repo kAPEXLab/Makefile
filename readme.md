@@ -35,6 +35,12 @@ Below is a concise, **summary of the 5 Makefile experiments** present in this re
 | Example 4  | Explicit SRC/OBJ mapping | Maintain a clear, curated source list with clean mapping. |
 | Example 5  | Directory structure, auto-deps, build modes | Full-featured, scalable build with directories, auto-deps, and release/debug. |
 
+# Makefile – Examples Index
+- [Example 1 – Basic Rules](example1/)
+- [Example 2 – Variables & Warnings](example2/)
+- [Example 3 – Pattern Rules & .PHONY](example3/)
+- [Example 4 – Explicit SRC/OBJ Mapping](example4/)
+- [Example 5 – Directory Structure & Auto‑Deps](example5/)
 
 ## Example 1: **Basic Makefile: Two Sources, Manual Rules**
 
