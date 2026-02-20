@@ -5,7 +5,6 @@ parent: Examples
 nav_order: 4
 ---
 
-
 # example4
 
 ## Files in `example4/`
@@ -35,6 +34,7 @@ nav_order: 4
 ## hello.h
 ```c
 {% include_relative hello.h %}
+
 ```
 
 ## hello.c
