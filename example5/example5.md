@@ -17,7 +17,6 @@ nav_order: 5
 - `src/` — sources
 - `build/` — generated objects and dependency files
 
-## README (example-level)
 {% capture md %}{% include_relative readme.md %}{% endcapture %}
 {{ md | markdownify }}
 
