@@ -1,7 +1,6 @@
 ---
 layout: default
 title: example1
-parent: Examples
 nav_order: 1
 ---
 
