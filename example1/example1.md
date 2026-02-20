@@ -28,7 +28,7 @@ nav_order: 1
 
 ## hello.c
 ```c
-{% include_relativehello.c %}
+{% include_relative hello.c %}
 ```
 
 ## main.c
