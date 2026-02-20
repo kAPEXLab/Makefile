@@ -11,7 +11,6 @@ nav_order: 4
 
 ---
 
-## README (example-level)
 {% capture md %}{% include_relative readme.md %}{% endcapture %}
 {{ md | markdownify }}
 
