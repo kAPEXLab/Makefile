@@ -1,0 +1,9 @@
+title: Makefile Examples
+description: KPIT APEX Lab · Makefile training examples
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
+# Theme options
+search_enabled: true
+nav_sort: case_insensitive
