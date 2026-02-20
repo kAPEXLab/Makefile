@@ -9,7 +9,7 @@ nav_order: 5
 # example5
 
 ## Files in `example5/`
-{% include listdir.html dir:"/example5/" exclude_ext:"o|d" %}
+{% include listdir.html dir:'/example5/' exclude_ext:"o|d" %}
 
 ---
 
