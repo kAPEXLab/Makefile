@@ -1,10 +1,10 @@
 ---
 layout: default
-title: example4
+title: Example4 Advanced Makefile for Multi-Source C Project
 nav_order: 4
 ---
 
-# example4
+# Example4 Advanced Makefile for Multi-Source C Project
 
 ## Files in `example4/`
 {% include listdir.html dir='/example4/' %}
