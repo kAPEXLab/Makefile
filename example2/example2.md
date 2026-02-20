@@ -1,11 +1,11 @@
 ---
 layout: default
-title: example2
+title: example2: Building myapp with Makefile (Enhanced Version)
 nav_order: 3
 ---
 
 
-# example2
+# Example2
 
 ## Files in `example2/`
 {% include listdir.html dir='/example2/' %}
