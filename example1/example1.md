@@ -13,26 +13,26 @@ nav_order: 1
 ---
 
 ## README (example-level)
-{% capture md %}{% include_relative example1/readme.md %}{% endcapture %}
+{% capture md %}{% include_relative readme.md %}{% endcapture %}
 {{ md | markdownify }}
 
 ## Makefile
 ```make
-{% include_relative example1/Makefile %}
+{% include_relative Makefile %}
 ```
 
 ## hello.h
 ```c
-{% include_relative example1/hello.h %}
+{% include_relative hello.h %}
 ```
 
 ## hello.c
 ```c
-{% include_relative example1/hello.c %}
+{% include_relativehello.c %}
 ```
 
 ## main.c
 ```c
-{% include_relative example1/main.c %}
+{% include_relative main.c %}
 ```
 
