@@ -1,3 +1,8 @@
+---
+nav_exclude: true
+---
+
+
 # Advanced Makefile for Building `myapp`
 
 ## Overview
