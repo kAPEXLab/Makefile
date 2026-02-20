@@ -1,11 +1,11 @@
 ---
 layout: default
-title: example5
+title: Example5 Scalable C Project with Directory-Structured Makefile
 nav_order: 5
 ---
 
 
-# example5
+# Example5 Scalable C Project with Directory-Structured Makefile
 
 ## Files in `example5/`
 {% include listdir.html dir='/example5/' exclude_ext="o|d" %}
