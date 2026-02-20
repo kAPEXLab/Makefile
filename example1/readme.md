@@ -1,6 +1,8 @@
 ---
 nav_exclude: true
+layout: default
 ---
+
 
 # Building and Running myapp Using Makefile
 
