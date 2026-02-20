@@ -1,6 +1,6 @@
-# make
+# **make**
 
-*What is make and Why Use It?*https://github.com/kAPEXLab/Makefile/tree/main
+*What is make and Why Use It?
 
 `make` is a build automation tool that reads instructions from a Makefile.
 
@@ -13,13 +13,13 @@ It helps:
 
 Key Idea: If a source file changes, only its dependent targets are rebuilt.
 
-*Installation*
+***Installation***
 ````bash
 sudo apt-get install build-essential
 ````
 ***
 
-*Reference*
+***Reference***
 
 [https://www.gnu.org/software/make/manual/make.html](https://www.gnu.org/software/make/manual/make.html)
 
