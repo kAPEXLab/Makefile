@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 # Building and Running myapp Using Makefile
 
 ### Overview
