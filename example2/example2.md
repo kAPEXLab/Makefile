@@ -5,7 +5,7 @@ nav_order: 3
 ---
 
 
-# Example2
+# Example2 Building myapp with Makefile (Enhanced Version)
 
 ## Files in `example2/`
 {% include listdir.html dir='/example2/' %}
