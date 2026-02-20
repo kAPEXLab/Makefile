@@ -34,6 +34,6 @@ nav_order: 3
 
 ## main.c
 ```c
-{% include_relative example3/main.c %}
+{% include_relative main.c %}
 ```
 
