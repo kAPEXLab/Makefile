@@ -1,6 +1,6 @@
 ---
 layout: default
-title: example2: Building myapp with Makefile (Enhanced Version)
+title: Example2 Building myapp with Makefile (Enhanced Version)
 nav_order: 3
 ---
 
