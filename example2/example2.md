@@ -9,7 +9,7 @@ nav_order: 2
 # example2
 
 ## Files in `example2/`
-{% include listdir.html dir:'/example2/' %}
+{% include listdir.html dir='/example2/' %}
 
 ---
 
