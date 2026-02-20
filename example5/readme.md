@@ -1,3 +1,8 @@
+---
+nav_exclude: true
+---
+
+
 # Scalable C Project with Directory-Structured Makefile
 
 ## Overview
