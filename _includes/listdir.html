@@ -1,0 +1,19 @@
+<!-- _includes/listdir.html -->
+<ul>
+  {%- assign target = include.dir | default: "" -%}
+  {%- assign ex = include.exclude_ext | default: "" -%}
+  {%- assign exclude_arr = ex | split: '|' -%}
+  {%- for f in site.static_files -%}
+    {%- assign p = f.path -%}
+    {%- if p contains target -%}
+      {%- assign ok = true -%}
+      {%- assign ext = f.extname | remove_first: '.' -%}
+      {%- if ex != "" and exclude_arr contains ext -%}
+        {%- assign ok = false -%}
+      {%- endif -%}
+      {%- if ok -%}
+        <li><a href="{{ f.path | relative_url }}">{{ f.name }}</a></li>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+</ul>
