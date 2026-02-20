@@ -19,36 +19,36 @@ nav_order: 5
 - `build/` — generated objects and dependency files
 
 ## README (example-level)
-{% capture md %}{% include_relative example5/readme.md %}{% endcapture %}
+{% capture md %}{% include_relative readme.md %}{% endcapture %}
 {{ md | markdownify }}
 
 ## Makefile
 ```make
-{% include_relative example5/Makefile %}
+{% include_relative Makefile %}
 ```
 
 ### include/add.h
 ```c
-{% include_relative example5/include/add.h %}
+{% include_relative include/add.h %}
 ```
 
 ### include/hello.h
 ```c
-{% include_relative example5/include/hello.h %}
+{% include_relative include/hello.h %}
 ```
 
 ### src/add.c
 ```c
-{% include_relative example5/src/add.c %}
+{% include_relative src/add.c %}
 ```
 
 ### src/hello.c
 ```c
-{% include_relative example5/src/hello.c %}
+{% include_relative src/hello.c %}
 ```
 
 ### src/main.c
 ```c
-{% include_relative example5/src/main.c %}
+{% include_relative src/main.c %}
 ```
 
